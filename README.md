@@ -1,5 +1,5 @@
 # 💫 About Me:
-👋 Hi, I'm a Data Analyst with 3+ years of experience in the Indian BFSI domain. I specialize in Power BI, Excel, SQL, and data-driven insights to support strategic decision-making. Passionate about turning raw data into clear, actionable stories.
+👋 Hi, I'm a Data Analyst with 3+ years of experience in the BFSI domain. I specialize in Power BI, Excel, SQL, and data-driven insights to support strategic decision-making. Passionate about turning raw data into clear, actionable stories.
 
 
 ## 🌐 Socials:
