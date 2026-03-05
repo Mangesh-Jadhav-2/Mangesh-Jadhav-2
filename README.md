@@ -17,14 +17,14 @@
 ```yaml
 Name:       Mangesh Jadhav
 Role:       Data Analyst @ Probus Insurance
-Education:  MBA Candidate — IT & Analytics
-Domain:     BFSI (Banking, Financial Services & Insurance)
+Education:  Executive MBA — IT & Analytics
+Domain:     BFSI & Analytics
 Focus:      Data Infrastructure · Cloud Analytics · Business Intelligence
 ```
 
 - 🔹 Automated ETL pipelines achieving **70% performance improvement** in data processing throughput
 - 🔹 Designed AWS Data Warehouse architectures using **S3 → Glue → Redshift**
-- 🔹 Built **15+ Power BI dashboards** with advanced DAX measures and semantic data models
+- 🔹 Built **Power BI dashboards** with advanced DAX measures and semantic data models
 - 🔹 Proficient in optimized SQL — parameterized CTEs, window functions, complex joins on multi-million row datasets
 
 ---
