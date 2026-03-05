@@ -87,13 +87,15 @@ Focus:      Data Infrastructure · Cloud Analytics · Business Intelligence
 
 #### 🤖 [RAG Reporting System](https://github.com/Mangesh-Jadhav-2/RAG-Reporting-System)
 
-> For automated analytical report generation
+> **RAG** performance tracking system with predictive analytics powered by ML & LLM
 
-**Stack:** `Python` · `LangChain` · `OpenAI API` · `SQL` · `Pandas` · `Jinja2`
+**Stack:** `Python` · `LangChain` · `scikit-learn` · `Pandas` · `SQL` · `Power BI`
 
-- Semantic layer abstraction decoupling business logic from physical data models
-- LLM-powered narrative generation with parameterized prompts
-- Automated weekly report generation — **reduced manual effort by 80%**
+- RAG (Red-Amber-Green) status classification for KPI health monitoring
+- Predictive analytics using **classification & regression models** (Logistic Regression, Random Forest, XGBoost)
+- **LangChain LLM integration** for automated performance narrative generation
+- Trend forecasting and anomaly detection for proactive decision-making
+- Automated weekly RAG status reports — **reduced manual reporting effort by 80%**
 
 </td></tr>
 <tr><td>
@@ -105,7 +107,7 @@ Focus:      Data Infrastructure · Cloud Analytics · Business Intelligence
 **Stack:** `Power BI` · `DAX` · `MS SQL Server` · `Excel` · `Power Query`
 
 - Star-schema data model (facts: transactions, claims; dimensions: agents, products, time)
-- 15+ interactive reports with drill-through navigation
+- Interactive reports with drill-through navigation
 - Time-intelligence DAX measures — YTD, QoQ, Weighted, Rolling averages
 - Row-level security (RLS) for multi-tenant access
 - Incremental refresh for near-real-time reporting
