@@ -1,6 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:1A1B27,100:00D9FF&height=220&section=header&text=Mangesh%20Jadhav&fontSize=46&fontColor=FFFFFF&fontAlignY=36&desc=Data%20%26%20Analytics%20%7C%20BI%20%7C%20Cloud%20Data%20Engineering%20%7C%20Agentic%20AI&descSize=17&descColor=00D9FF&descAlignY=57&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:1A1B27,100:00D9FF&height=140&section=header" width="100%" />
+
+# Mangesh Jadhav
+
+### Data & Analytics · BI · Cloud Data Engineering · Agentic AI
 
 **I turn messy financial and insurance data into pipelines, dashboards and decisions that people can trust.**
 
@@ -16,7 +20,7 @@
 
 ## 👋 At a glance
 
-| | |
+| Area | Details |
 |:--|:--|
 | 🎯 **Focus** | Data infrastructure · Cloud analytics · Business intelligence · LLM agents for finance |
 | 🏦 **Domain** | BFSI: insurance broking, banking operations, credit |
