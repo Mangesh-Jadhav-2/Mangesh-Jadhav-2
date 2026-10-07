@@ -22,7 +22,7 @@
 
 | Area | Details |
 |:--|:--|
-| 🎯 **Focus** | Data infrastructure · Cloud analytics · Business intelligence · LLM agents for finance |
+| 🎯 **Focus** | Data infrastructure · Cloud analytics · Business intelligence · Agents |
 | 🏦 **Domain** | BFSI: insurance broking, banking operations, credit |
 | 🧰 **Core tools** | Python · SQL · AWS (S3, Glue, Redshift) · Power BI & DAX · LangGraph |
 | 🎓 **Education** | Executive MBA in IT & Analytics, SIMS Pune (2027) · BMS in Finance, Sydenham College |
