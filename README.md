@@ -70,6 +70,21 @@ Focus:      Data Infrastructure · Cloud Analytics · Business Intelligence
 <table>
 <tr><td>
 
+#### 🏦 [Agentic Credit Underwriting Engine](https://github.com/Mangesh-Jadhav-2/agentic-credit-underwriter)
+
+> Multi-agent credit underwriting system that reads a live SEC 10-K/20-F filing and produces a rated, priced credit memo with a tamper-evident audit trail
+
+**Stack:** `Python` · `LangGraph` · `Groq LLM` · `Pydantic` · `Streamlit` · `SEC EDGAR API`
+
+- Four-agent LangGraph pipeline: quantitative ratios, retrieval-based qualitative risk review, policy guardrails, credit memo synthesis
+- Deterministic rules applied after the LLM cap the rating, credit limit and pricing spread, so the model can be stricter than policy but never looser
+- Generic XBRL extraction for live 10-K and 20-F filings, with per-field provenance and a data-integrity gate that refers the case to an analyst instead of guessing
+- Every reported risk must quote the filing word for word; ungrounded findings are dropped and logged
+- Hash-chained audit log of inputs, policy version, model and overrides, plus **113 automated tests**
+
+</td></tr>
+<tr><td>
+
 #### 📈 [Analytics EDA Project](https://github.com/Mangesh-Jadhav-2/Analytics-EDA-Project)
 
 > End-to-end Exploratory Data Analysis pipeline for multi-dimensional BFSI data profiling
