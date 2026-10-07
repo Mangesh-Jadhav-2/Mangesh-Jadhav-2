@@ -1,37 +1,149 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:1A1B27,100:00D9FF&height=220&section=header&text=Mangesh%20Jadhav&fontSize=42&fontColor=FFFFFF&fontAlignY=35&desc=Data%20Analyst%20%7C%20BI%20Developer%20%7C%20Cloud%20Analytics&descSize=18&descColor=00D9FF&descAlignY=55&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:1A1B27,100:00D9FF&height=220&section=header&text=Mangesh%20Jadhav&fontSize=46&fontColor=FFFFFF&fontAlignY=36&desc=Data%20%26%20Analytics%20%7C%20BI%20%7C%20Cloud%20Data%20Engineering%20%7C%20Agentic%20AI&descSize=17&descColor=00D9FF&descAlignY=57&animation=fadeIn" width="100%" />
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mangesh--jadhav)
+**I turn messy financial and insurance data into pipelines, dashboards and decisions that people can trust.**
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-00D9FF?style=for-the-badge&logo=netlify&logoColor=0D1117)](https://mangeshdatanalyst.netlify.app/)
 &nbsp;
-[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mangeshjadhav948@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mangesh-jadhav-878859200)
 &nbsp;
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Mangesh-Jadhav-2)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mangeshjadhav948@gmail.com)
 
 </div>
 
 ---
 
-### 🧑‍💼 About Me
+## 👋 At a glance
 
-```yaml
-Name:       Mangesh Jadhav
-Role:       Data Analyst @ Probus Insurance
-Education:  Executive MBA — IT & Analytics
-Domain:     BFSI & Analytics
-Focus:      Data Infrastructure · Cloud Analytics · Business Intelligence
-```
+| | |
+|:--|:--|
+| 🎯 **Focus** | Data infrastructure · Cloud analytics · Business intelligence · LLM agents for finance |
+| 🏦 **Domain** | BFSI: insurance broking, banking operations, credit |
+| 🧰 **Core tools** | Python · SQL · AWS (S3, Glue, Redshift) · Power BI & DAX · LangGraph |
+| 🎓 **Education** | Executive MBA in IT & Analytics, SIMS Pune (2027) · BMS in Finance, Sydenham College |
+| 📍 **Based in** | Mumbai, India |
 
-- 🔹 Automated ETL pipelines achieving **70% performance improvement** in data processing throughput
-- 🔹 Designed AWS Data Warehouse architectures using **S3 → Glue → Redshift**
-- 🔹 Built **Power BI dashboards** with advanced DAX measures and semantic data models
-- 🔹 Proficient in optimized SQL — parameterized CTEs, window functions, complex joins on multi-million row datasets
+### What I bring
+
+- ⚡ Automated ETL pipelines with a **70% improvement in data-processing throughput**
+- ☁️ AWS data-warehouse designs on **S3 → Glue → Redshift**
+- 📊 **Power BI** dashboards with advanced DAX, star-schema models and row-level security
+- 🧮 Optimised SQL: parameterised CTEs, window functions, complex joins on multi-million-row datasets
+- 🤖 Agentic AI for finance, with deterministic guardrails around the LLM
 
 ---
 
-### 🛠️ Tech Stack
+## 🏆 Flagship project: Agentic Credit Underwriting Engine
+
+**[View the repository →](https://github.com/Mangesh-Jadhav-2/agentic-credit-underwriter)**
+
+An AI underwriting prototype that reads a company's **latest SEC annual filing (10-K / 20-F)**, computes credit ratios, applies bank-style policy guardrails, reads the filing's risk disclosures, and produces a **rated, priced credit memo** with every step recorded in a tamper-evident audit log.
+
+> **The design idea:** the LLM writes and reasons; **deterministic code decides what the bank is allowed to approve.**
+
+```mermaid
+flowchart LR
+    A["SEC EDGAR<br/>filing data"] --> B["Loader<br/>generic XBRL rules"]
+    B --> C{"Data-integrity<br/>gate"}
+    C -- "blocked" --> X["Stop: nothing<br/>is guessed"]
+    C -- "pass" --> D["Agent 1<br/>Quantitative ratios"]
+    B --> N["Narrative retrieval"]
+    N --> E["Agent 2<br/>Qualitative risks<br/>(quotes only)"]
+    D --> F["Agent 3<br/>Policy guardrails"]
+    E --> F
+    F --> H["Agent 4<br/>Memo synthesis (LLM)"]
+    H --> I["Deterministic bounds<br/>rating, limit, spread"]
+    I --> J["Decision memo"]
+    J --> K[("Hash-chained<br/>audit log")]
+```
+
+| Risk with a naive "LLM underwriter" | How this project handles it |
+|:--|:--|
+| Missing numbers silently defaulted | A **data-integrity gate** blocks the case or refers it to an analyst |
+| Model proposes a limit or price outside policy | **Deterministic rules** cap rating, limit and spread *after* the LLM answers |
+| Model invents risks | Every risk must **quote the filing word for word**; ungrounded findings are dropped |
+| "Who decided what, using which data?" | **Hash-chained audit log** of inputs, policy version, model and overrides |
+
+**Stack:** `Python` · `LangGraph` · `Groq LLM` · `Pydantic v2` · `Streamlit` · `lxml` · `SEC EDGAR APIs` · **113 automated tests**
+
+---
+
+## 🚀 More projects
+
+<table>
+<tr><td>
+
+#### 📈 [Analytics EDA Project](https://github.com/Mangesh-Jadhav-2/Analytics-EDA-Project)
+
+> End-to-end exploratory data analysis pipeline for multi-dimensional BFSI data profiling
+
+**Stack:** `Python` · `Pandas` · `NumPy` · `Matplotlib` · `Seaborn` · `SQL`
+
+- Parameterised CTEs and window functions for reusable query patterns and trend analysis
+- Automated data-quality checks across 20+ feature columns; outlier detection with IQR and Z-score
+- Reusable profiling templates that **reduced EDA effort by 60%**
+
+</td></tr>
+<tr><td>
+
+#### 🤖 [RAG Reporting System](https://github.com/Mangesh-Jadhav-2/RAG-Reporting-System)
+
+> Red-Amber-Green performance tracking with predictive analytics powered by ML and an LLM
+
+**Stack:** `Python` · `LangChain` · `scikit-learn` · `Pandas` · `SQL` · `Power BI`
+
+- RAG status classification for KPI health monitoring
+- Classification and regression models (Logistic Regression, Random Forest, XGBoost), plus trend forecasting and anomaly detection
+- LangChain narrative generation and automated weekly reports that **cut manual reporting effort by 80%**
+
+</td></tr>
+<tr><td>
+
+#### 📊 [Performance Analytics Dashboard](https://github.com/Mangesh-Jadhav-2/Performance-Analytics-Dashboard)
+
+> Enterprise KPI tracking dashboard for insurance analytics
+
+**Stack:** `Power BI` · `DAX` · `MS SQL Server` · `Excel` · `Power Query`
+
+- Star-schema model (facts: transactions, claims; dimensions: agents, products, time)
+- Time-intelligence DAX (YTD, QoQ, weighted, rolling averages) with drill-through reports
+- Row-level security for multi-tenant access and incremental refresh for near-real-time reporting
+
+</td></tr>
+</table>
+
+---
+
+## 💼 Experience
+
+| Role | Where | When | What I did |
+|:--|:--|:--|:--|
+| **Data Analyst** | Probus Insurance Broker Pvt. Ltd., Mumbai | Mar 2024 – Mar 2026 | Built the ETL, AWS warehouse and Power BI reporting stack for insurance production and management reporting (architecture below) |
+| **KYC Analyst** | RBL Bank, Mumbai | Apr 2022 – Jan 2024 | Customer due diligence and KYC compliance in retail banking |
+
+**Learning:** Microsoft Power BI Data Analyst (PL-300), in progress · **Certified:** Data Science & AI (Intellipaat) · Google Analytics
+
+---
+
+## 🛠️ Tech stack
 
 <div align="center">
+
+#### 🤖 AI & Applications
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+
+#### ⚙️ Data Engineering
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![AWS Glue](https://img.shields.io/badge/AWS_Glue-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
+![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=for-the-badge&logo=awslambda&logoColor=white)
+![ETL](https://img.shields.io/badge/ETL_Pipelines-FF6F00?style=for-the-badge&logo=apacheairflow&logoColor=white)
 
 #### 📦 Databases
 ![MS SQL Server](https://img.shields.io/badge/MS_SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
@@ -39,20 +151,11 @@ Focus:      Data Infrastructure · Cloud Analytics · Business Intelligence
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 
-#### ⚙️ Data Engineering
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![AWS Glue](https://img.shields.io/badge/AWS_Glue-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
-![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=for-the-badge&logo=awslambda&logoColor=white)
-![ETL Pipelines](https://img.shields.io/badge/ETL_Pipelines-FF6F00?style=for-the-badge&logo=apacheairflow&logoColor=white)
-
-#### 📊 BI & Visualization
+#### 📊 BI & Visualisation
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![DAX](https://img.shields.io/badge/DAX-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
 
 #### ☁️ Cloud & Infrastructure
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
@@ -65,103 +168,37 @@ Focus:      Data Infrastructure · Cloud Analytics · Business Intelligence
 
 ---
 
-### 🚀 Featured Projects
+## 📐 Production data architecture
 
-<table>
-<tr><td>
+> *The pipeline architecture I built at Probus Insurance. Expand to view.*
 
-#### 🏦 [Agentic Credit Underwriting Engine](https://github.com/Mangesh-Jadhav-2/agentic-credit-underwriter)
-
-> Multi-agent credit underwriting system that reads a live SEC 10-K/20-F filing and produces a rated, priced credit memo with a tamper-evident audit trail
-
-**Stack:** `Python` · `LangGraph` · `Groq LLM` · `Pydantic` · `Streamlit` · `SEC EDGAR API`
-
-- Four-agent LangGraph pipeline: quantitative ratios, retrieval-based qualitative risk review, policy guardrails, credit memo synthesis
-- Deterministic rules applied after the LLM cap the rating, credit limit and pricing spread, so the model can be stricter than policy but never looser
-- Generic XBRL extraction for live 10-K and 20-F filings, with per-field provenance and a data-integrity gate that refers the case to an analyst instead of guessing
-- Every reported risk must quote the filing word for word; ungrounded findings are dropped and logged
-- Hash-chained audit log of inputs, policy version, model and overrides, plus **113 automated tests**
-
-</td></tr>
-<tr><td>
-
-#### 📈 [Analytics EDA Project](https://github.com/Mangesh-Jadhav-2/Analytics-EDA-Project)
-
-> End-to-end Exploratory Data Analysis pipeline for multi-dimensional BFSI data profiling
-
-**Stack:** `Python` · `Pandas` · `NumPy` · `Matplotlib` · `Seaborn` · `SQL`
-
-- Parameterized CTEs for reusable SQL query patterns
-- Window functions for rolling aggregations & trend analysis
-- Automated data quality checks across 20+ feature columns
-- Outlier detection using IQR & Z-score methods
-- Built reusable profiling templates — **reduced EDA effort by 60%**
-
-</td></tr>
-<tr><td>
-
-#### 🤖 [RAG Reporting System](https://github.com/Mangesh-Jadhav-2/RAG-Reporting-System)
-
-> **RAG** performance tracking system with predictive analytics powered by ML & LLM
-
-**Stack:** `Python` · `LangChain` · `scikit-learn` · `Pandas` · `SQL` · `Power BI`
-
-- RAG (Red-Amber-Green) status classification for KPI health monitoring
-- Predictive analytics using **classification & regression models** (Logistic Regression, Random Forest, XGBoost)
-- **LangChain LLM integration** for automated performance narrative generation
-- Trend forecasting and anomaly detection for proactive decision-making
-- Automated weekly RAG status reports — **reduced manual reporting effort by 80%**
-
-</td></tr>
-<tr><td>
-
-#### 📊 [Performance Analytics Dashboard](https://github.com/Mangesh-Jadhav-2/Performance-Analytics-Dashboard)
-
-> Enterprise KPI tracking dashboard for insurance analytics at Probus Insurance
-
-**Stack:** `Power BI` · `DAX` · `MS SQL Server` · `Excel` · `Power Query`
-
-- Star-schema data model (facts: transactions, claims; dimensions: agents, products, time)
-- Interactive reports with drill-through navigation
-- Time-intelligence DAX measures — YTD, QoQ, Weighted, Rolling averages
-- Row-level security (RLS) for multi-tenant access
-- Incremental refresh for near-real-time reporting
-
-</td></tr>
-</table>
-
----
-
-### 📐 End-to-End Data Pipeline Architecture
-
-> *Actual production architecture built at Probus Insurance*
-
-#### ⚙️ AWS Glue — ETL & Data Processing Layer
+<details>
+<summary><b>⚙️ AWS Glue: ETL and data-processing layer</b></summary>
 
 ```mermaid
 flowchart LR
-    subgraph ON-PREM["🏢 On-Premise"]
-        MSSQL[("🗄️ MS SQL Server")]
+    subgraph ONPREM["🏢 On-premise"]
+        MSSQL[("MS SQL Server")]
     end
 
     subgraph AWS_GLUE["☁️ AWS Glue"]
         direction TB
-        ETL1["Visual ETL\MSSQL_to_AWS"]
-        S3_RAW[("📦 S3 — MSSQL_Glue\(Raw Parquet)")]
-        SPARK1["⚡ PySpark\Parquet_conso"]
-        SPARK2["⚡ PySpark\Agent_master_update"]
-        S3_CLEAN[("📦 S3 — BI_Parquet\CLEAN_upd")]
-        S3_BIZ[("📦 S3 — Business Data\Production_data")]
-        ETL2["Visual ETL\AWS to MS SQL"]
+        ETL1["Visual ETL<br/>MSSQL to AWS"]
+        S3_RAW[("S3: MSSQL_Glue<br/>raw Parquet")]
+        SPARK1["PySpark<br/>Parquet_conso"]
+        SPARK2["PySpark<br/>Agent_master_update"]
+        S3_CLEAN[("S3: BI_Parquet<br/>CLEAN_upd")]
+        S3_BIZ[("S3: Business Data<br/>Production_data")]
+        ETL2["Visual ETL<br/>AWS to MS SQL"]
     end
 
-    subgraph QUERY["🔍 Query Layer"]
-        ATHENA["Amazon Athena\Basic Querying"]
+    subgraph QUERY["🔍 Query layer"]
+        ATHENA["Amazon Athena<br/>basic querying"]
     end
 
     subgraph DEST["🏢 Destination"]
-        MSSQL2[("🗄️ On-PREM MS SQL\(Staged Back)")]
-        GW["🌐 On-PREM Gateway"]
+        MSSQL2[("On-prem MS SQL<br/>staged back")]
+        GW["On-prem gateway"]
     end
 
     MSSQL -- "JDBC via VPN" --> ETL1
@@ -174,37 +211,35 @@ flowchart LR
     S3_BIZ --> ETL2
     ETL2 --> MSSQL2
     MSSQL2 --> GW
-
-    style ON-PREM fill:#1a1b27,stroke:#00d9ff,color:#fff
-    style AWS_GLUE fill:#1a1b27,stroke:#FF9900,color:#fff
-    style QUERY fill:#1a1b27,stroke:#8C4FFF,color:#fff
-    style DEST fill:#1a1b27,stroke:#47A248,color:#fff
 ```
 
-#### 📊 Power BI — Semantic Model & Report Layer
+</details>
+
+<details>
+<summary><b>📊 Power BI: semantic model and report layer</b></summary>
 
 ```mermaid
 flowchart LR
-    subgraph SOURCES["🔌 Data Sources"]
-        SQL[("🗄️ SQL Server\On-PREM Gateway")]
-        ATH[("🗄️ Amazon Athena\P24_Proj Gateway")]
+    subgraph SOURCES["🔌 Data sources"]
+        SQL[("SQL Server<br/>on-prem gateway")]
+        ATH[("Amazon Athena<br/>P24_Proj gateway")]
     end
 
     subgraph TRANSFORM["⚙️ Dataflows"]
-        DF["Dataset Gateway\(Dataflow Gen1)"]
+        DF["Dataset gateway<br/>Dataflow Gen1"]
     end
 
-    subgraph MODELS["📐 Semantic Models"]
+    subgraph MODELS["📐 Semantic models"]
         SM1["Production_Report"]
-        SM2["Production_Report\RLS for Motor"]
-        SM3["Direct_Query\"]
+        SM2["Production_Report<br/>RLS for Motor"]
+        SM3["Direct_Query"]
     end
 
     subgraph REPORTS["📊 Reports"]
-        R1["Production_Report\Overview"]
-        R2["Management\nDashboard"]
-        R3["Business Dashboard\RLS for Motor"]
-        R4["Direct_Query\P24_Dashboard"]
+        R1["Production_Report<br/>Overview"]
+        R2["Management<br/>Dashboard"]
+        R3["Business Dashboard<br/>RLS for Motor"]
+        R4["Direct_Query<br/>P24_Dashboard"]
     end
 
     SQL --> DF
@@ -215,27 +250,27 @@ flowchart LR
     SM2 --> R3
     ATH --> SM3
     SM3 --> R4
-
-    style SOURCES fill:#1a1b27,stroke:#CC2927,color:#fff
-    style TRANSFORM fill:#1a1b27,stroke:#FF9900,color:#fff
-    style MODELS fill:#1a1b27,stroke:#F2C811,color:#fff
-    style REPORTS fill:#1a1b27,stroke:#00d9ff,color:#fff
 ```
+
+</details>
+
 ---
 
 <div align="center">
 
-### 🤝 Let's Connect
+## 🤝 Let's connect
 
-💼 **Open to collaboration** on Data Infrastructure, Cloud Analytics, and BI projects
+Open to collaboration on **data infrastructure, cloud analytics, BI and agentic-AI projects** in finance and insurance.
 
-[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mangesh--jadhav)
+[![Portfolio](https://img.shields.io/badge/View_Portfolio-00D9FF?style=for-the-badge&logo=netlify&logoColor=0D1117)](https://mangeshdatanalyst.netlify.app/)
+&nbsp;&nbsp;
+[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mangesh-jadhav-878859200)
 &nbsp;&nbsp;
 [![Email](https://img.shields.io/badge/Send_an_Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mangeshjadhav948@gmail.com)
 
-<br/><br/>
+<br/>
 
-*"Exploring data, building dashboards and uncovering insights that matter."*
+*Exploring data, building dashboards and uncovering insights that matter.*
 
 </div>
 
